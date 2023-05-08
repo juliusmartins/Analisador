@@ -24,6 +24,11 @@ while(indice<entrada.size())
                     //Proximo texto seria uma variavel automaticamente
                     marcador_de_variavel = 1;
                 }
+                else if(marcador_de_variavel==1)
+                {
+                    cout << analisador << " é uma variavel" << endl;
+                    marcador_de_variavel=0;
+                }
             }
             else if(isdigit(analisador[i]) == true && i==analisador.size()-1)
             {
