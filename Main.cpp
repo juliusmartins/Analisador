@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 using namespace std;
 int main()
 {
@@ -17,7 +18,6 @@ while(indice<entrada.size())
         {
             if(isdigit(analisador[i]) == false && i==analisador.size()-1)
             {
-                cout << analisador << " é uma string" << endl;
                 if(analisador == "int")
                 {
                     cout << analisador << " é a palavra reservada int" << endl;
@@ -29,6 +29,18 @@ while(indice<entrada.size())
                     cout << analisador << " é uma variavel" << endl;
                     marcador_de_variavel=0;
                 }
+                else if(analisador.find("=") != string::npos)
+                {
+                    cout << "Tem o operador =" << endl;
+                }
+                else
+                {
+                    cout << analisador << " é uma string" << endl;
+                }
+            }
+            else if(analisador.find("=") != string::npos)
+            {
+                cout << "Tem o operador =" << endl;
             }
             else if(isdigit(analisador[i]) == true && i==analisador.size()-1)
             {
@@ -46,7 +58,6 @@ while(indice<entrada.size())
             {
                 if(isdigit(analisador[i]) == false && i==analisador.size()-1)
                 {
-                    cout << analisador << " é uma string" << endl;
                     if(analisador == "int")
                     {
                         cout << analisador << " é a palavra reservada int" << endl;
@@ -55,6 +66,14 @@ while(indice<entrada.size())
                     {
                         cout << analisador << " é uma variavel" << endl;
                         marcador_de_variavel=0;
+                    }
+                    else if(analisador.find("=") != string::npos)
+                    {
+                        cout << "Tem o operador =" << endl;
+                    }
+                    else
+                    {
+                        cout << analisador << " é uma string" << endl;
                     }
                 }
                 else if(isdigit(analisador[i]) == true && i==analisador.size()-1)
