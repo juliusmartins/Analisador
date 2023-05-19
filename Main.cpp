@@ -9,7 +9,7 @@ int marcador_de_num_real = 0;
 int marcador_de_id = 0;
 string analisador;
 string entrada;
-getline(cin,entrada);
+getline(cin,entrada,'z');
 cout << entrada << endl;
 while(indice<entrada.size())
 {
