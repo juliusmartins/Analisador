@@ -20,8 +20,12 @@ while(indice<entrada.size())
             {
                 if(analisador == "int")
                 {
-                    cout << analisador << " é a palavra reservada int" << endl;
-                    //Proximo texto seria uma variavel automaticamente
+                    cout << analisador << " é uma palavra reservada" << endl;
+                    marcador_de_variavel = 1;
+                }
+                else if(analisador == "float")
+                {
+                    cout << analisador << " é uma palavra reservada" << endl;
                     marcador_de_variavel = 1;
                 }
                 else if(marcador_de_variavel==1)
@@ -97,6 +101,11 @@ while(indice<entrada.size())
                     if(analisador == "int")
                     {
                         cout << analisador << " é a palavra reservada int" << endl;
+                    }
+                    else if(analisador == "float")
+                    {
+                    cout << analisador << " é uma palavra reservada" << endl;
+                    marcador_de_variavel = 1;
                     }
                     else if(marcador_de_variavel==1)
                     {
