@@ -6,9 +6,10 @@ int main()
 int indice = 0;
 int marcador_de_variavel = 0;
 int marcador_de_num_real = 0;
+int marcador_de_id = 0;
 string analisador;
 string entrada;
-getline(cin,entrada,static_cast<char>(EOF));
+getline(cin,entrada);
 cout << entrada << endl;
 while(indice<entrada.size())
 {
@@ -18,6 +19,11 @@ while(indice<entrada.size())
         {
             cout << "Tem o símbolo ," << endl;
             marcador_de_num_real = 1;
+        }
+        else if(analisador.find("program") != string::npos)
+        {
+            cout << "Tem a palavra reservada program" << endl;
+            marcador_de_id = 1;
         }
         for (int i = 0; i < analisador.size(); i++)
         {
@@ -41,7 +47,12 @@ while(indice<entrada.size())
                 else if(marcador_de_variavel==1)
                 {
                     cout << analisador << " é uma variavel" << endl;
-                    marcador_de_variavel=0;
+                    marcador_de_variavel = 0;
+                }
+                else if(marcador_de_id == 1)
+                {
+                    cout << analisador << " é um id" << endl;
+                    marcador_de_id = 0
                 }
                 else if(analisador.find(":") != string::npos)
                 {
@@ -141,6 +152,11 @@ while(indice<entrada.size())
                 cout << "Tem o símbolo ," << endl;
                 marcador_de_num_real = 1;
             }
+            else if(analisador.find("program") != string::npos)
+            {
+                cout << "Tem a palavra reservada program" << endl;
+                marcador_de_id = 1;
+            }
             for (int i = 0; i < analisador.size(); i++)
             {
                 if(isdigit(analisador[i]) == false && i==analisador.size()-1)
@@ -163,7 +179,12 @@ while(indice<entrada.size())
                     else if(marcador_de_variavel==1)
                     {
                         cout << analisador << " é uma variavel" << endl;
-                        marcador_de_variavel=0;
+                        marcador_de_variavel = 0;
+                    }
+                    else if(marcador_de_id == 1)
+                    {
+                        cout << analisador << " é um id" << endl;
+                        marcador_de_id = 0
                     }
                     else if(analisador.find(":") != string::npos)
                     {
