@@ -44,6 +44,22 @@ while(indice<entrada.size())
                     cout << "Tem a palavra reservada program" << endl;
                     marcador_de_id = 1;
                 }
+                else if(analisador == "begin")
+                {
+                    cout << "Tem a palavra reservada begin" << endl;
+                }
+                else if(analisador == "end")
+                {
+                    cout << "Tem a palavra reservada end" << endl;
+                }
+                else if(analisador == "do")
+                {
+                    cout << "Tem a palavra reservada do" << endl;
+                }
+                else if(analisador == "to")
+                {
+                    cout << "Tem a palavra reservada to" << endl;
+                }
                 else if(marcador_de_variavel==1)
                 {
                     cout << analisador << " é uma variavel" << endl;
@@ -179,6 +195,22 @@ while(indice<entrada.size())
                     {
                         cout << "Tem a palavra reservada program" << endl;
                         marcador_de_id = 1;
+                    }
+                    else if(analisador == "begin")
+                    {
+                        cout << "Tem a palavra reservada begin" << endl;
+                    }
+                    else if(analisador == "end")
+                    {
+                        cout << "Tem a palavra reservada end" << endl;
+                    }
+                    else if(analisador == "do")
+                    {
+                        cout << "Tem a palavra reservada do" << endl;
+                    }
+                    else if(analisador == "to")
+                    {
+                        cout << "Tem a palavra reservada to" << endl;
                     }
                     else if(marcador_de_variavel==1)
                     {
