@@ -26,14 +26,25 @@ while(indice<entrada.size())
             {
                 if(analisador.find(";") != string::npos)
                 {
-                    cout << "Tem o símbolo ;" << endl;
+                    cout << "Tem o delimitador simples ;" << endl;
                 }
-                if(analisador == "int")
+                if(analisador == "integer;")
                 {
-                    cout << analisador << " é uma palavra reservada" << endl;
-                    marcador_de_variavel = 1;
+                    if(analisador.find(";") != string::npos)
+                    {
+                        for (int i = 0; i < analisador.size() - 1; ++i)
+                        {
+                            cout << analisador[i];
+                        }
+                        cout << " é uma palavra reservada" << endl;
+                    }
+                    else
+                    {
+                        cout << analisador << " é uma palavra reservada" << endl;
+                    }
+                    //marcador_de_variavel = 1;
                 }
-                else if(analisador == "float")
+                else if(analisador == "real;")
                 {
                     cout << analisador << " é uma palavra reservada" << endl;
                     marcador_de_variavel = 1;
@@ -86,12 +97,27 @@ while(indice<entrada.size())
                 }
                 else if(marcador_de_id == 1 && analisador != "(")
                 {
-                    cout << analisador << " é um id" << endl;
+                    if(analisador.find(";") != string::npos)
+                    {
+                        for (int i = 0; i < analisador.size() - 1; ++i)
+                        {
+                            cout << analisador[i];
+                        }
+                        cout << " é um id" << endl;
+                    }
+                    else
+                    {
+                        cout << analisador << " é um id" << endl;
+                    }
                     marcador_de_id = 0;
+                }
+                else if(analisador.find(":=") != string::npos)
+                {
+                    cout << "Tem o delimitador composto :=" << endl;
                 }
                 else if(analisador.find(":") != string::npos)
                 {
-                    cout << "Tem o símbolo :" << endl;
+                    cout << "Tem o delimitador simples :" << endl;
                 }
                 else if(analisador.find(">=") != string::npos)
                 {
@@ -153,10 +179,6 @@ while(indice<entrada.size())
                 {
                     cout << "Tem o delimitador simples ]" << endl;
                 }
-                else if(analisador.find(":=") != string::npos)
-                {
-                    cout << "Tem o delimitador composto :=" << endl;
-                }
                 else if(analisador.find(",") != string::npos)
                 {
                     cout << "Tem o símbolo ," << endl;
@@ -197,14 +219,25 @@ while(indice<entrada.size())
                 {
                     if(analisador.find(";") != string::npos)
                     {
-                        cout << "Tem o símbolo ;" << endl;
+                        cout << "Tem o delimitador simples ;" << endl;
                     }
-                    if(analisador == "int")
+                    if(analisador == "integer;")
                     {
-                        cout << analisador << " é uma palavra reservada" << endl;
-                        marcador_de_variavel = 1;
+                        if(analisador.find(";") != string::npos)
+                        {
+                            for (int i = 0; i < analisador.size() - 1; ++i)
+                            {
+                                cout << analisador[i];
+                            }
+                            cout << " é uma palavra reservada" << endl;
+                        }
+                        else
+                        {
+                            cout << analisador << " é uma palavra reservada" << endl;
+                        }
+                        //marcador_de_variavel = 1;
                     }
-                    else if(analisador == "float")
+                    else if(analisador == "real;")
                     {
                         cout << analisador << " é uma palavra reservada" << endl;
                         marcador_de_variavel = 1;
@@ -257,12 +290,27 @@ while(indice<entrada.size())
                     }
                     else if(marcador_de_id == 1 && analisador != "(")
                     {
-                        cout << analisador << " é um id 2" << endl;
+                        if(analisador.find(";") != string::npos)
+                        {
+                            for (int i = 0; i < analisador.size() - 1; ++i)
+                            {
+                                cout << analisador[i];
+                            }
+                            cout << " é um id" << endl;
+                        }
+                        else
+                        {
+                            cout << analisador << " é um id" << endl;
+                        }
                         marcador_de_id = 0;
+                    }
+                    else if(analisador.find(":=") != string::npos)
+                    {
+                        cout << "Tem o delimitador composto :=" << endl;
                     }
                     else if(analisador.find(":") != string::npos)
                     {
-                    cout << "Tem o símbolo :" << endl;
+                        cout << "Tem o delimitador simples :" << endl;
                     }
                     else if(analisador.find(">=") != string::npos)
                     {
@@ -323,10 +371,6 @@ while(indice<entrada.size())
                     else if(analisador.find("]") != string::npos)
                     {
                         cout << "Tem o delimitador simples ]" << endl;
-                    }
-                    else if(analisador.find(":=") != string::npos)
-                    {
-                        cout << "Tem o delimitador composto :=" << endl;
                     }
                     else if(analisador.find(",") != string::npos)
                     {
