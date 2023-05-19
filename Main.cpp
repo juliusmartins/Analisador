@@ -20,11 +20,6 @@ while(indice<entrada.size())
             cout << "Tem o símbolo ," << endl;
             marcador_de_num_real = 1;
         }
-        else if(analisador.find("program") != string::npos)
-        {
-            cout << "Tem a palavra reservada program" << endl;
-            marcador_de_id = 1;
-        }
         for (int i = 0; i < analisador.size(); i++)
         {
             if(isdigit(analisador[i]) == false && i==analisador.size()-1)
@@ -44,6 +39,11 @@ while(indice<entrada.size())
                     cout << analisador << " é uma palavra reservada" << endl;
                     marcador_de_variavel = 1;
                 }
+                else if(analisador == "program")
+                {
+                    cout << "Tem a palavra reservada program" << endl;
+                    marcador_de_id = 1;
+                }
                 else if(marcador_de_variavel==1)
                 {
                     cout << analisador << " é uma variavel" << endl;
@@ -54,9 +54,13 @@ while(indice<entrada.size())
                     cout << analisador << " é um id" << endl;
                     marcador_de_id = 0;
                 }
+                else if(analisador.find(";") != string::npos)
+                {
+                    cout << "Tem o símbolo ;" << endl;
+                }
                 else if(analisador.find(":") != string::npos)
                 {
-                    cout << "Tem o operador :" << endl;
+                    cout << "Tem o símbolo :" << endl;
                 }
                 else if(analisador.find(">=") != string::npos)
                 {
@@ -152,11 +156,6 @@ while(indice<entrada.size())
                 cout << "Tem o símbolo ," << endl;
                 marcador_de_num_real = 1;
             }
-            else if(analisador.find("program") != string::npos)
-            {
-                cout << "Tem a palavra reservada program" << endl;
-                marcador_de_id = 1;
-            }
             for (int i = 0; i < analisador.size(); i++)
             {
                 if(isdigit(analisador[i]) == false && i==analisador.size()-1)
@@ -176,6 +175,11 @@ while(indice<entrada.size())
                         cout << analisador << " é uma palavra reservada" << endl;
                         marcador_de_variavel = 1;
                     }
+                    else if(analisador == "program")
+                    {
+                        cout << "Tem a palavra reservada program" << endl;
+                        marcador_de_id = 1;
+                    }
                     else if(marcador_de_variavel==1)
                     {
                         cout << analisador << " é uma variavel" << endl;
@@ -186,9 +190,13 @@ while(indice<entrada.size())
                         cout << analisador << " é um id" << endl;
                         marcador_de_id = 0;
                     }
+                    else if(analisador.find(";") != string::npos)
+                    {
+                        cout << "Tem o símbolo ;" << endl;
+                    }
                     else if(analisador.find(":") != string::npos)
                     {
-                    cout << "Tem o operador :" << endl;
+                    cout << "Tem o símbolo :" << endl;
                     }
                     else if(analisador.find(">=") != string::npos)
                     {
