@@ -44,6 +44,11 @@ while(indice<entrada.size())
                     cout << "Tem a palavra reservada program" << endl;
                     marcador_de_id = 1;
                 }
+                else if(analisador == "read")
+                {
+                    cout << analisador << " é uma palavra reservada" << endl;
+                    marcador_de_id = 1;
+                }
                 else if(analisador == "begin")
                 {
                     cout << "Tem a palavra reservada begin" << endl;
@@ -51,6 +56,11 @@ while(indice<entrada.size())
                 else if(analisador == "end")
                 {
                     cout << "Tem a palavra reservada end" << endl;
+                }
+                else if(analisador == "for")
+                {
+                    cout << "Tem a palavra reservada for" << endl;
+                    marcador_de_id = 1;
                 }
                 else if(analisador == "do")
                 {
@@ -65,7 +75,7 @@ while(indice<entrada.size())
                     cout << analisador << " é uma variavel" << endl;
                     marcador_de_variavel = 0;
                 }
-                else if(marcador_de_id == 1)
+                else if(marcador_de_id == 1 && analisador != "(")
                 {
                     cout << analisador << " é um id" << endl;
                     marcador_de_id = 0;
@@ -196,6 +206,11 @@ while(indice<entrada.size())
                         cout << "Tem a palavra reservada program" << endl;
                         marcador_de_id = 1;
                     }
+                    else if(analisador == "read")
+                    {
+                        cout << analisador << " é uma palavra reservada" << endl;
+                        marcador_de_id = 1;
+                    }
                     else if(analisador == "begin")
                     {
                         cout << "Tem a palavra reservada begin" << endl;
@@ -203,6 +218,11 @@ while(indice<entrada.size())
                     else if(analisador == "end")
                     {
                         cout << "Tem a palavra reservada end" << endl;
+                    }
+                    else if(analisador == "for")
+                    {
+                        cout << "Tem a palavra reservada for" << endl;
+                        marcador_de_id = 1;
                     }
                     else if(analisador == "do")
                     {
@@ -217,7 +237,7 @@ while(indice<entrada.size())
                         cout << analisador << " é uma variavel" << endl;
                         marcador_de_variavel = 0;
                     }
-                    else if(marcador_de_id == 1)
+                    else if(marcador_de_id == 1 && analisador != "(")
                     {
                         cout << analisador << " é um id" << endl;
                         marcador_de_id = 0;
