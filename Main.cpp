@@ -52,7 +52,7 @@ while(indice<entrada.size())
                 else if(marcador_de_id == 1)
                 {
                     cout << analisador << " é um id" << endl;
-                    marcador_de_id = 0
+                    marcador_de_id = 0;
                 }
                 else if(analisador.find(":") != string::npos)
                 {
@@ -184,7 +184,7 @@ while(indice<entrada.size())
                     else if(marcador_de_id == 1)
                     {
                         cout << analisador << " é um id" << endl;
-                        marcador_de_id = 0
+                        marcador_de_id = 0;
                     }
                     else if(analisador.find(":") != string::npos)
                     {
