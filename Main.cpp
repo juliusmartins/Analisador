@@ -24,6 +24,10 @@ while(indice<entrada.size())
         {
             if(isdigit(analisador[i]) == false && i==analisador.size()-1)
             {
+                if(analisador.find(";") != string::npos)
+                {
+                    cout << "Tem o símbolo ;" << endl;
+                }
                 if(analisador == "int")
                 {
                     cout << analisador << " é uma palavra reservada" << endl;
@@ -45,6 +49,11 @@ while(indice<entrada.size())
                     marcador_de_id = 1;
                 }
                 else if(analisador == "read")
+                {
+                    cout << analisador << " é uma palavra reservada" << endl;
+                    marcador_de_id = 1;
+                }
+                else if(analisador == "write")
                 {
                     cout << analisador << " é uma palavra reservada" << endl;
                     marcador_de_id = 1;
@@ -79,10 +88,6 @@ while(indice<entrada.size())
                 {
                     cout << analisador << " é um id" << endl;
                     marcador_de_id = 0;
-                }
-                else if(analisador.find(";") != string::npos)
-                {
-                    cout << "Tem o símbolo ;" << endl;
                 }
                 else if(analisador.find(":") != string::npos)
                 {
@@ -134,19 +139,23 @@ while(indice<entrada.size())
                 }
                 else if(analisador.find("(") != string::npos)
                 {
-                    cout << "Tem o símbolo (" << endl;
+                    cout << "Tem o delimitador simples (" << endl;
                 }
                 else if(analisador.find(")") != string::npos)
                 {
-                    cout << "Tem o símbolo )" << endl;
+                    cout << "Tem o delimitador simples )" << endl;
                 }
                 else if(analisador.find("[") != string::npos)
                 {
-                    cout << "Tem o símbolo [" << endl;
+                    cout << "Tem o delimitador simples [" << endl;
                 }
                 else if(analisador.find("]") != string::npos)
                 {
-                    cout << "Tem o símbolo ]" << endl;
+                    cout << "Tem o delimitador simples ]" << endl;
+                }
+                else if(analisador.find(":=") != string::npos)
+                {
+                    cout << "Tem o delimitador composto :=" << endl;
                 }
                 else if(analisador.find(",") != string::npos)
                 {
@@ -186,6 +195,10 @@ while(indice<entrada.size())
             {
                 if(isdigit(analisador[i]) == false && i==analisador.size()-1)
                 {
+                    if(analisador.find(";") != string::npos)
+                    {
+                        cout << "Tem o símbolo ;" << endl;
+                    }
                     if(analisador == "int")
                     {
                         cout << analisador << " é uma palavra reservada" << endl;
@@ -207,6 +220,11 @@ while(indice<entrada.size())
                         marcador_de_id = 1;
                     }
                     else if(analisador == "read")
+                    {
+                        cout << analisador << " é uma palavra reservada" << endl;
+                        marcador_de_id = 1;
+                    }
+                    else if(analisador == "write")
                     {
                         cout << analisador << " é uma palavra reservada" << endl;
                         marcador_de_id = 1;
@@ -239,12 +257,8 @@ while(indice<entrada.size())
                     }
                     else if(marcador_de_id == 1 && analisador != "(")
                     {
-                        cout << analisador << " é um id" << endl;
+                        cout << analisador << " é um id 2" << endl;
                         marcador_de_id = 0;
-                    }
-                    else if(analisador.find(";") != string::npos)
-                    {
-                        cout << "Tem o símbolo ;" << endl;
                     }
                     else if(analisador.find(":") != string::npos)
                     {
@@ -296,19 +310,23 @@ while(indice<entrada.size())
                     }
                     else if(analisador.find("(") != string::npos)
                     {
-                        cout << "Tem o símbolo (" << endl;
+                        cout << "Tem o delimitador simples (" << endl;
                     }
                     else if(analisador.find(")") != string::npos)
                     {
-                        cout << "Tem o símbolo )" << endl;
+                        cout << "Tem o delimitador simples )" << endl;
                     }
                     else if(analisador.find("[") != string::npos)
                     {
-                        cout << "Tem o símbolo [" << endl;
+                        cout << "Tem o delimitador simples [" << endl;
                     }
                     else if(analisador.find("]") != string::npos)
                     {
-                        cout << "Tem o símbolo ]" << endl;
+                        cout << "Tem o delimitador simples ]" << endl;
+                    }
+                    else if(analisador.find(":=") != string::npos)
+                    {
+                        cout << "Tem o delimitador composto :=" << endl;
                     }
                     else if(analisador.find(",") != string::npos)
                     {
