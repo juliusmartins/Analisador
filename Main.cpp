@@ -24,10 +24,6 @@ while(indice<entrada.size())
         {
             if(isdigit(analisador[i]) == false && i==analisador.size()-1)
             {
-                if(analisador.find(";") != string::npos)
-                {
-                    cout << "Tem o delimitador simples ;" << endl;
-                }
                 if(analisador == "integer;")
                 {
                     if(analisador.find(";") != string::npos)
@@ -73,9 +69,20 @@ while(indice<entrada.size())
                 {
                     cout << "Tem a palavra reservada begin" << endl;
                 }
-                else if(analisador == "end")
+                else if(analisador == "end;")
                 {
-                    cout << "Tem a palavra reservada end" << endl;
+                    if(analisador.find(";") != string::npos)
+                    {
+                        for (int i = 0; i < analisador.size() - 1; ++i)
+                        {
+                            cout << analisador[i];
+                        }
+                        cout << " é uma palavra reservada" << endl;
+                    }
+                    else
+                    {
+                        cout << analisador << " é uma palavra reservada" << endl;
+                    }
                 }
                 else if(analisador == "for")
                 {
@@ -110,6 +117,10 @@ while(indice<entrada.size())
                         cout << analisador << " é um id" << endl;
                     }
                     marcador_de_id = 0;
+                }
+                if(analisador.find(";") != string::npos)
+                {
+                    cout << "Tem o delimitador simples ;" << endl;
                 }
                 else if(analisador.find(":=") != string::npos)
                 {
@@ -217,10 +228,6 @@ while(indice<entrada.size())
             {
                 if(isdigit(analisador[i]) == false && i==analisador.size()-1)
                 {
-                    if(analisador.find(";") != string::npos)
-                    {
-                        cout << "Tem o delimitador simples ;" << endl;
-                    }
                     if(analisador == "integer;")
                     {
                         if(analisador.find(";") != string::npos)
@@ -266,9 +273,20 @@ while(indice<entrada.size())
                     {
                         cout << "Tem a palavra reservada begin" << endl;
                     }
-                    else if(analisador == "end")
+                    else if(analisador == "end;")
                     {
-                        cout << "Tem a palavra reservada end" << endl;
+                        if(analisador.find(";") != string::npos)
+                        {
+                            for (int i = 0; i < analisador.size() - 1; ++i)
+                            {
+                                cout << analisador[i];
+                            }   
+                            cout << " é uma palavra reservada" << endl;
+                        }
+                        else
+                        {
+                            cout << analisador << " é uma palavra reservada" << endl;
+                        }
                     }
                     else if(analisador == "for")
                     {
@@ -303,6 +321,10 @@ while(indice<entrada.size())
                             cout << analisador << " é um id" << endl;
                         }
                         marcador_de_id = 0;
+                    }
+                    if(analisador.find(";") != string::npos)
+                    {
+                        cout << "Tem o delimitador simples ;" << endl;
                     }
                     else if(analisador.find(":=") != string::npos)
                     {
